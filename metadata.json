@@ -1,0 +1,7 @@
+{
+  "name": "PostaTees Studio",
+  "description": "An admin-facing UGC tee builder. Generate graphics with AI, animate them with motion models, and create product drafts for Shopify.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

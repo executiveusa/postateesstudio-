@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostaTees Studio | Creator Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Bricolage Grotesque', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-bg': '#050505',
+                        'brand-primary': '#F2BE22', // PostaTees Yellow
+                        'brand-accent': '#0EA5A4', // Teal Accent
+                        'brand-dark': '#121212',
+                        'text-primary': '#FFFFFF',
+                        'text-muted': '#9CA3AF',
+                        'surface-glass': 'rgba(20, 20, 20, 0.6)',
+                        'surface-border': 'rgba(242, 190, 34, 0.15)',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0"
+  }
+}
+</script>
+<style>
+    body {
+        background-color: #050505;
+        color: #fff;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #0A0A0A; 
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #333; 
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #F2BE22; 
+    }
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="font-sans antialiased selection:bg-brand-primary selection:text-black">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
